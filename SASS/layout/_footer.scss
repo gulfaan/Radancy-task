@@ -1,0 +1,43 @@
+.footer {
+  border-top: 1px solid $heading-color;
+  padding: 40px 0;
+  .social-media {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    padding-bottom: 20px;
+  }
+
+  .sitemap {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 10px;
+
+    a {
+      font-size: 12px;
+      font-weight: 600;
+      color: #000000;
+    
+      &:hover{
+         text-decoration: underline;
+      }
+    }
+      span{
+        font-size: 12px;
+      }
+  }
+
+  p {
+    font-size: 11px;
+    color: #666666;
+    font-family: "Arial";
+    line-height: 17px;
+
+    a {
+      color: #666666;
+      text-decoration: underline;
+    }
+  }
+}

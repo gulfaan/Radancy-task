@@ -1,0 +1,321 @@
+.hr-heading {
+  font-size: 30px;
+  line-height: normal;
+  font-weight: 500;
+  color: $heading-color;
+  text-align: center;
+  position: relative;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+
+  &::after {
+    border-bottom: 2px solid black;
+    content: "";
+    display: block;
+    width: 10%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    position: absolute;
+    border-color: $heading-color;
+    bottom: 0px;
+  }
+}
+
+.investment-main {
+  p {
+    font-size: 18px;
+    line-height: 31px;
+    text-align: left;
+  }
+}
+
+.advantages {
+  .features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 82px 70px;
+    padding-top: 10px;
+  }
+
+  .feature {
+    position: relative;
+
+    &.feature:nth-child(even)::before {
+      content: "";
+      position: absolute;
+      left: -37px;
+      top: 0;
+      width: 1px;
+      height: 95%;
+      background: #c8c8c8;
+    }
+
+    h3 {
+      font-size: 24px;
+      letter-spacing: 0px;
+      line-height: 31px;
+      font-weight: 500;
+      padding-bottom: 10px;
+      color: $heading-color;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 31px;
+      text-align: left;
+    }
+
+    a {
+      font-size: 18px;
+      padding-top: 10px;
+      display: inline-block;
+      color: $link-color;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.coverage {
+  padding-top: 60px;
+  .coverage-heading {
+    background: $primary-color;
+    h2 {
+      font-size: 24px;
+      letter-spacing: 0px;
+      line-height: 31px;
+      color: #ffffff;
+      text-align: center;
+      font-weight: 500;
+      padding: 15px;
+    }
+  }
+
+  .loan-text-container {
+    padding: 30px 60px;
+    background-color: #ebf7f5;
+
+    p {
+
+      font-size: 18px;
+      line-height: 31px;
+      text-align: left;
+
+    }
+  }
+
+}
+
+.testimonials-sec {
+  padding-bottom: 100px;
+
+  .testimonial_main {
+    @include flexbox(row, wrap, space-between, stretch);
+
+    .testimonial {
+      width: 30%;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      flex-direction: column;
+
+      p {
+        font-size: 17px;
+        letter-spacing: 0px;
+        line-height: 29px;
+        color: #666666;
+        font-style: italic;
+        text-align: center;
+        position: relative;
+        margin-top: 5px;
+
+        &::before {
+          position: absolute;
+          content: ":";
+          left: -6px;
+          top: 5px;
+          width: 67px;
+          height: 54px;
+          background: url(../assets/images/quote.png);
+          background-repeat: no-repeat;
+          background-size: 57px;
+        }
+
+      }
+
+      p.client-name {
+        color: $heading-color;
+        font-size: 18px;
+        letter-spacing: 0px;
+        line-height: 29px;
+        padding-top: 15px;
+        width: 100% !important;
+        text-align: center;
+
+        &::before {
+          content: unset;
+        }
+
+        span {
+          display: block;
+          font-style: normal;
+
+        }
+      }
+
+      &:nth-child(1) p {
+        width: 38%;
+      }
+
+      &:nth-child(3) p {
+        width: 46%;
+      }
+    }
+  }
+}
+
+// Resposive CSS Starts
+@media (max-width: 768px) {
+  .btn {
+    font-size: 21px;
+    line-height: 28px;
+  }
+
+  .hr-heading {
+    font-size: 24px;
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+  }
+
+  .investment-main {
+    p {
+      font-size: 16px;
+      line-height: 27px;
+    }
+  }
+
+  .all_sec {
+    padding: 40px 0;
+  }
+
+  .Header {
+    padding: 30px 0;
+
+    img {
+      width: 178px;
+      margin: 0 auto;
+      display: flex;
+    }
+  }
+
+  .hero-section {
+    img.hero-image {
+      display: none;
+    }
+
+    .mobile-hero-image {
+      display: block;
+    }
+  }
+
+  .hr-heading::after {
+    width: 25%;
+  }
+
+  .advantages {
+    .features {
+      grid-template-columns: 1fr;
+      gap: 40px 0px;
+    }
+
+    .feature {
+      p {
+        font-size: 16px;
+        line-height: 27px;
+      }
+
+      a {
+        font-size: 16px;
+
+        img {
+          width: 8px;
+        }
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -22px;
+        right: 0;
+        width: 100%;
+        height: 1px;
+        background: #c8c8c8;
+      }
+
+      &:last-child::after {
+        content: unset;
+      }
+
+      h3 {
+        font-size: 20px;
+        letter-spacing: 0px;
+        line-height: 27px;
+      }
+    }
+  }
+
+
+  .coverage {
+    padding-top: 40px;
+
+    .coverage-heading {
+      h2 {
+        font-size: 21px;
+      }
+    }
+
+    .loan-text-container {
+      padding: 15px 12px;
+
+      p {
+        font-size: 16px;
+        line-height: 26px;
+      }
+    }
+  }
+
+  .testimonials-sec {
+    .testimonial_main {
+      .testimonial {
+        width: 100%;
+        margin-bottom: 20px;
+
+        p {
+          width: 66% !important;
+          font-size: 16px;
+        }
+
+        p.client-name {
+          font-size: 16px;
+          padding-top: 5px;
+        }
+
+        &:nth-child(1) p {
+          width: 100%;
+        }
+
+        &:nth-child(3) p {
+          width: 100%;
+        }
+
+      }
+    }
+  }
+
+  .footer {
+    padding: 25px 0;
+  }
+}

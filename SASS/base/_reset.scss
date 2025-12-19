@@ -1,0 +1,68 @@
+* {
+	outline: none;
+	margin: 0;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: $font-stack;
+	background-color: $white-color;
+}
+
+figure {
+	margin: 0;
+}
+
+img {
+	max-width: 100%;
+}
+
+a,
+a:hover,
+a:focus {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+ul,
+li,
+ol {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+	padding: 0;
+	color: $text-color;
+}
+
+.span_blk {
+	display: block;
+}
+
+.container {
+	max-width: 1250px;
+	margin: 0 auto;
+	width: 90%;
+}
+
+.all_sec {
+	padding: 60px 0;
+}
+
+.d-block {
+	display: block;
+}
+
+.d-none {
+	display: none;
+}
